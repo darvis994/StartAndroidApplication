@@ -7,12 +7,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="darvis.startandroidapplication.MainActivity">
+    tools:context="darvis.startandroidapplication.MainActivity"
+    android:contextClickable="false"
+    android:focusable="true"
+    android:focusableInTouchMode="false">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="300px"
         android:layout_height="wrap_content"
-        android:text="Hello android developer!"
         android:id="@+id/helloTextView"
         android:layout_marginTop="40dp"
         android:contextClickable="false"
@@ -22,11 +24,41 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello Button"
+        android:text="Plus"
         android:id="@+id/helloButton"
         android:layout_marginBottom="84dp"
         android:alpha="0.9"
         android:enabled="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputTextField"
+        android:layout_above="@+id/helloButton"
+        android:layout_alignStart="@+id/helloTextView"
+        android:layout_marginBottom="116dp"
+        android:layout_alignEnd="@+id/helloTextView"
+        android:layout_alignParentEnd="false"
+        android:textIsSelectable="false"
+        android:editable="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:text="Sum:"
+        android:layout_alignBottom="@+id/helloTextView"
+        android:layout_toStartOf="@+id/helloTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Number:"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/inputTextField"
+        android:layout_toStartOf="@+id/inputTextField" />
+
 </RelativeLayout>
