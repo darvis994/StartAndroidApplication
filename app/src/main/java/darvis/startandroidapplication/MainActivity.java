@@ -12,27 +12,16 @@ public class MainActivity extends AppCompatActivity {
     Button buttonHello;
     EditText editText;
 
-    static int sum = 0;
 
-    void sum(String number) {
-        int input = Integer.parseInt(number);
-        sum = sum + input;
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         textViewHello = (TextView) findViewById(R.id.helloTextView);
-        buttonHello = (Button) findViewById(R.id.helloButton);
-        editText = (EditText) findViewById(R.id.inputTextField);
 
-        buttonHello.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sum(editText.getText().toString().trim());
-                textViewHello.setText(String.valueOf(sum));
-            }
-        });
+
+
     }
 }
