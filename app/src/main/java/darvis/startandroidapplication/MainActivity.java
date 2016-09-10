@@ -10,6 +10,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        System.out.println("Test commit");
+        System.out.println("Test commit 3");
     }
 }
